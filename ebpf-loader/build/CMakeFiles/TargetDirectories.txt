@@ -1,0 +1,4 @@
+/home/devendrapatil/Desktop/ebpf-lab/ebpf-loader/build/CMakeFiles/ebpf_program.dir
+/home/devendrapatil/Desktop/ebpf-lab/ebpf-loader/build/CMakeFiles/ebpf_loader.dir
+/home/devendrapatil/Desktop/ebpf-lab/ebpf-loader/build/CMakeFiles/edit_cache.dir
+/home/devendrapatil/Desktop/ebpf-lab/ebpf-loader/build/CMakeFiles/rebuild_cache.dir

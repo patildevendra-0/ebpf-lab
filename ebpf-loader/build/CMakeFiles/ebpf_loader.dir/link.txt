@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/ebpf_loader.dir/src/user/loader.c.o -o ebpf_loader  /usr/lib/x86_64-linux-gnu/libbpf.so 
