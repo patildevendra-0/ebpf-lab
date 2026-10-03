@@ -1,14 +1,12 @@
-#include<linux/bpf.h>
-#include<bpf/bpf_helpers.h>
+#include "vmlinux.h"
+#include <bpf/bpf_helpers.h>
 
-SEC("tracepoint/syscalls/sys_enter_execve")
-int handle_exec(void* ctx)
+SEC("tracepoint/sched/sched_process_fork")
+int handle_fork(struct trace_event_raw_sched_process_fork *ctx)
 {
-    __u64 pid_tpid = bpf_get_current_pid_tgid();
-    __u32 PID = pid_tpid & 0xFFFFFFFF;
-    __u32 TPID = pid_tpid >> 32;
+    __u32 CHILD_PID = ctx->child_pid;
 
-    bpf_printk("HELLO FROM PID : %u | TPID : %u\n",PID,TPID);
+    bpf_printk("CHILD PID : %u\n",CHILD_PID);
 
     return 0;
 }
